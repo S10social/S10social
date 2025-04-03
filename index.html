@@ -35,19 +35,39 @@
             color: #ff4d4d;
             transition: color 0.3s ease;
         }
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1571677246347-5040036b95cc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        section {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 40px;
+            text-align: center;
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            border-radius: 10px;
+            min-height: 60vh;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            text-align: center;
+            background-color: #1e1e1e;
         }
-        .hero-content {
+        #home {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1571677246347-5040036b95cc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            height: 100vh;
+        }
+        #services {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1579869847557-1f67382cc158?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+        #about {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://plus.unsplash.com/premium_photo-1684341008757-3b456034e943?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        }
+        #contact {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1533750516457-a7f992034fec?q=80&w=2106&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: contain; /* Zooms out to show full image */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-position: center; /* Keeps it centered */
+        }
+        .section-content {
             max-width: 900px;
-            padding: 20px;
+            margin: 0 auto;
         }
         h1 {
             font-size: 4em;
@@ -82,19 +102,6 @@
         .cta-button:hover {
             background-color: #e60000;
         }
-        section {
-            max-width: 1000px;
-            margin: 100px auto;
-            padding: 40px;
-            background: #1e1e1e;
-            border-radius: 10px;
-            text-align: center;
-        }
-        section p {
-            font-size: 1.1em;
-            color: #b0b0b0;
-        }
-        /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
@@ -108,8 +115,8 @@
         <a href="#contact">Contact Us</a>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
+    <section id="home">
+        <div class="section-content">
             <h1>S10 Social</h1>
             <p>Supercharge your brand with expert social media marketing.</p>
             <a href="#contact" class="cta-button">Get Started</a>
@@ -117,22 +124,28 @@
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
-        <p><strong>Social Media Management:</strong> Full control of your accounts, posting, and engagement.</p>
-        <p><strong>Ad Campaigns:</strong> Targeted ads to boost reach and conversions.</p>
-        <p><strong>Content Creation:</strong> Eye-catching posts tailored to your brand.</p>
+        <div class="section-content">
+            <h2>Our Services</h2>
+            <p><strong>Social Media Management:</strong> Full control of your accounts, posting, and engagement.</p>
+            <p><strong>Ad Campaigns:</strong> Targeted ads to boost reach and conversions.</p>
+            <p><strong>Content Creation:</strong> Eye-catching posts tailored to your brand.</p>
+        </div>
     </section>
 
     <section id="about">
-        <h2>About S10 Social</h2>
-        <p>We’re a passionate team dedicated to helping businesses thrive online. With proven strategies and a client-first approach, we turn social media into your growth engine.</p>
+        <div class="section-content">
+            <h2>About S10 Social</h2>
+            <p>We’re a passionate team dedicated to helping businesses thrive online. With proven strategies and a client-first approach, we turn social media into your growth engine.</p>
+        </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Ready to grow? Reach out today!</p>
-        <p>Email: s10social@gmail.com</p>
-        <a href="mailto:s10social@gmail.com" class="cta-button">Send a Message</a>
+        <div class="section-content">
+            <h2>Contact Us</h2>
+            <p>Ready to grow? Reach out today!</p>
+            <p>Email: s10social@gmail.com</p>
+            <a href="mailto:s10social@gmail.com" class="cta-button">Send a Message</a>
+        </div>
     </section>
 </body>
 </html>
