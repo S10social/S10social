@@ -179,14 +179,35 @@
     </section>
 
     <section id="contact">
-        <div class="section-content">
-            <h2>Contact Us</h2>
-            <p>Ready to grow? Reach out today!</p>
-            <p>Email: <a href="mailto:S10Socialmn@gmail.com" style="color:#ff4d4d; text-decoration:none;">S10Socialmn@gmail.com</a></p>
+    <div class="section-content">
+        <h2>Contact Us</h2>
+        <p>Ready to grow? Reach out today!</p>
+        <p>Email: <a href="mailto:S10Socialmn@gmail.com" style="color:#ff4d4d; text-decoration:none;">S10Socialmn@gmail.com</a></p>
 
-            <!-- ✅ Fixed: Opens user’s default mail app with prefilled info -->
-            <a href="mailto:S10Socialmn@gmail.com?subject=Inquiry%20from%20S10%20Social%20Website&body=Hi%20S10%20Social%2C%0A%0AI%27m%20interested%20in%20your%20social%20media%20marketing%20services." class="cta-button">Send a Message</a>
-        </div>
-    </section>
-</body>
-</html>
+        <!-- ✅ Smart Email Button -->
+        <a href="#" class="cta-button" id="emailButton">Send a Message</a>
+    </div>
+
+    <script>
+        document.getElementById("emailButton").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const email = "S10Socialmn@gmail.com";
+            const subject = "Inquiry from S10 Social Website";
+            const body = "Hi S10 Social,%0A%0AI’m interested in your social media marketing services.";
+
+            const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+            const gmailLink = `https://mail.google.com/mail/?view=cm&to=${email}&su=${subject}&body=${body}`;
+
+            // Try to open mailto link
+            const newWindow = window.open(mailtoLink);
+
+            // If blocked or fails, fallback to Gmail
+            setTimeout(() => {
+                if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                    window.open(gmailLink, "_blank");
+                }
+            }, 500);
+        });
+    </script>
+</section>
